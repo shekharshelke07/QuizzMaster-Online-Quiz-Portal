@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">  
+        <div class="col-sm-6 "> 
+            <div class="signup-form "> 
+                <form class="form-horizontal" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Update Question</h2>
+                        </div>
+                    </div>
+
+                    <div *ngIf="alert" class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Success !</h4>
+                        <p>Question Updation successfull</p>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-4"> Question Id </label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" required [(ngModel)] = "question.qId" name="id" disabled>
+                        </div>
+                    </div>                   
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-4">Question:</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control"  placeholder="Enter Username"  name="candidateName" [(ngModel)]="question.que">
+                        </div>
+                    </div>
+ <div class="form-group row">
+    <label class="col-form-label col-md-4">Option 1:</label>
+       <div class="col-md-8">
+           <input type="text" class="form-control"  placeholder="option 1" name="op1" [(ngModel)]="question.op1">                       
+         </div>
+</div>
+     
+<div class="form-group row">
+    <label class="col-form-label col-md-4">Option 2:</label>
+       <div class="col-md-8">
+           <input type="text" class="form-control"  placeholder="option 2" name="op2" [(ngModel)]="question.op2">                       
+         </div>
+</div>
+    
+<div class="form-group row">
+    <label class="col-form-label col-md-4">Option 3:</label>
+       <div class="col-md-8">
+           <input type="email" class="form-control"  placeholder="option 3" name="op3" [(ngModel)]="question.op3">                       
+         </div>
+</div>
+		 
+<div class="form-group row">
+<label class="col-form-label col-md-4">Option 4:</label>
+   <div class="col-md-8">
+       <input type="email" class="form-control"  placeholder="option 4" name="op4" [(ngModel)]="question.op1">                       
+     </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-form-label col-md-4">answer</label>
+       <div class="col-md-8">
+           <input type="email" class="form-control"  placeholder="answer" name="ans" [(ngModel)]="question.corrAns">                       
+         </div>
+        </div>
+                    <div class="form-group row">
+                        <div class="col-form-label col-md-4">
+                            <button type="submit"  class="btn btn-success">Update </button> &nbsp; &nbsp;
+                            <button  type="button" class="btn btn-primary" (click)="back()">Back</button>&nbsp;&nbsp; 
+                        </div>
+                    </div>
+                    
+                </form>
+  
+            </div>
+        </div>
+    </div>
+  </div>

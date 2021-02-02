@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">  
+        <div class="col-sm-6 "> 
+            <div class="signup-form "> 
+                <form class="form-horizontal">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2>Create Test</h2>
+                        </div>
+                    </div>
+                    <div *ngIf="success" class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">Success !</h4>
+                        <p>Question added successfuly</p>
+                      </div>
+                      <div *ngIf="failure" class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading">Success !</h4>
+                        <p>Question addition failed</p>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-4">Test Id</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control"  placeholder="Enter Question" disabled  name="testid" [(ngModel)]="id">
+                        </div>
+                       </div>
+                      <div class="form-group row">
+                        <label class="col-form-label col-md-4">Question:</label>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control"  placeholder="Enter Question"  name="questionName" [(ngModel)]="question.que">
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-4">Marks</label>
+                            <div class="col-md-8">
+                                <input type="text" class="form-control"  placeholder="Enter Question"  name="questionName" [(ngModel)]="question.marks">
+                            </div>
+                    </div>                  
+ 
+                </div>                    
+        <div class="buttons">
+                            <button type="submit"  class="btn btn-success" (click)="addQuestion(question.testId)">Add Question</button>&nbsp; &nbsp;
+                            <button type="submit" class="btn btn-success" (click)="addOptions(question.qId)" [disabled]="toggle>Add Options</button>
+                            <button type="button" class="btn btn-primary" (click)="backTo()">Back</button>
+
+        </div>                    
+                </form>
+  
+            </div>
+        </div>
+    </div>
+</div>
